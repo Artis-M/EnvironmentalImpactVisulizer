@@ -71,3 +71,7 @@ Packages/com.ptc.vuforia.engine-10.9.3.tgz
 Assets/ERP
 Assets/ERP.meta
 .erp
+
+#APK Stuff
+/test_BackUpThisFolder_ButDontShipItWithYourGame/
+test.apk
