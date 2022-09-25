@@ -9,7 +9,9 @@ public class TapManager : MonoBehaviour
 {
     private ARRaycastManager _arRaycastManager;
     static List<ARRaycastHit> _hits = new List<ARRaycastHit>();
-    private Vector2 _touchPosition; 
+    private Vector2 _touchPosition;
+    public GameObject objectToCreate;
+    
     
     void Awake()
     {
@@ -31,9 +33,11 @@ public class TapManager : MonoBehaviour
     {
         if (TryGetTouch(out Vector2 touch))
         {
-            if(_arRaycastManager.Raycast(touch, _hits, TrackableType.PlaneWithinPolygon))
+            var RayCastTouch = Input.GetTouch(0);
+            if(_arRaycastManager.Raycast(RayCastTouch.position, _hits, TrackableType.PlaneWithinPolygon))
             {
-                
+                /*var hitpose = _hits[0].pose;
+                Instantiate(objectToCreate, hitpose.position, hitpose.rotation);*/
             }
         }    
     }
