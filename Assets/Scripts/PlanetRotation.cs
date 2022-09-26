@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlanetRotation : MonoBehaviour
 {
     public GameObject orbitPivot;
-    public int fullOrbitTime;
-    public int fullRotationTime;
+    public long fullOrbitTime;
+    public long fullRotationTime;
     public TimeManager timeManager;
     public bool orbitReverse = false;
     public bool rotationReverse = false;
@@ -31,7 +31,7 @@ public class PlanetRotation : MonoBehaviour
         if (orbitPivot != null)
         {
             transform.RotateAround(orbitPivot.transform.position, _reverseOrbitVector, 360f * Time.deltaTime * timeManager.GetTimeMultiplier() / fullOrbitTime);
-        }
+        } 
         
     }
 }
