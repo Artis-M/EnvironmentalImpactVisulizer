@@ -19,7 +19,6 @@ public class TimeManager : MonoBehaviour
     public void SliderMove(float val)
     {
         sliderVal = Mathf.RoundToInt(val);
-        Debug.Log(sliderVal);
     }
 
     // Update is called once per frame
